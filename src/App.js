@@ -3,23 +3,28 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  state = {
+    width: 0,
+    height: 0
+  }
+
+  componentDidMount(){
+    this.setState({
+      width: window.innerWidth, 
+      height: window.innerHeight
+    })
+  }
+
   render() {
+    const {width, height} = this.state
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <marquee width={`${width}px`} behavior='alternate' scrollamount='12'>
+        <marquee height={`${height}px`} direction='up' behavior='alternate' scrollamount='12'>
+          <span className='dvd'>DVD</span>
+        </marquee>
+        </marquee>
       </div>
     );
   }
