@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: pr
+
+steps:
+  - name: echo
+    commands:
+      - echo "say"
+trigger:
+  branch:
+    - master
+    - feature/*
+  event:
+    - push
