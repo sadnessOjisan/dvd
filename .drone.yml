@@ -5,7 +5,7 @@ name: pr
 steps:
   - name: echo
     commands:
-      - echo "say"
+      - echo "saaay"
 trigger:
   branch:
     - master
