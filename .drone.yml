@@ -4,10 +4,10 @@ name: pr
 
 steps:
   - name: code-build
-     image: node:10
-     commands:
-       - yarn
-       - yarn run build
+    image: node:10
+    commands:
+      - yarn
+      - yarn run build
   - name: docker-build
     image: plugins/ecr
     settings:
